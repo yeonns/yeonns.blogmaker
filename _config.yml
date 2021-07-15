@@ -107,6 +107,17 @@ defaults:
       # can be overridden in the front matter for a specific post
       hidden: false
 
+destination: ./output
+production_url: https://yeonns.github.io/
+source_url: https://github.com/yeonns/yeonns.blogmaker
+
+safe: false
+lsi: false
+
+username: yeonns
+repo: yeonns.blogmaker
+branch: master
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist

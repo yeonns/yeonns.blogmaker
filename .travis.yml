@@ -1,16 +1,21 @@
+sudo: false
 language: ruby
+cache: bundler
 rvm:
  - 2.6.3
 
 before_script:
  - chmod +x ./script/cibuild
+ - git config --global user.email "ysh099@gmail.com"
+ - git config --global user.name "yeonns"
 
 script: ./script/cibuild
 
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: "ctacjJKh+PcOHHDySgnfH44oNgQLX0nfxDxXWsdMdaCr5zKD9ziQulOGB4DMzhthBkPLiwmq6BgXjXvC/oiUjM1UYOItwl86IBraa706ZH8D3IZzzKHoTCHT6xITgw0meYMldS0luCK9qZ4aEfOaBhcxnkjTxmsjmLaYj4Yqrw4kLTWGeJEdk0Srfox70ZohRAyZVKWwLTKnXu0HoLTADxUgi6tAaUgnDkdsGGE6OfQ3j4NgeBgo4XACPdEEisFyCZePlpYornzQZhfIt17gIbcg7ye0Atr3ScyLhjWqJvfhqObswwwn/WIimebkZeR+61+OPMXGMatHvOsVSqEu8d33H014FcFkl7ew7nh2BuKoKHb96ECTCBo31zady7lEAxDzjmvFBK9m+OtqWCV7VmyYdnGW6xhc18plZ+COzwEi9PglL8hmrNsz4hnM/NIe4ssae/XSbx6ssCeHvFaJCRIh9YdKDtrVnJ+oL7NFFcyCX/KJgz3UYW81TioBZ/95ji5u1KOo8dGERkpMjD8FDmdNvZqH8EASWoNavqhy9n1R60Um8ET1ZhHPEuZQzjdKWUGprcJoXApeflccWsiJYlRWY1zJS1IF5/EsHc24QW6EP9R8pZbqXfWY/hWOWHfJ0v0NUenKQQqPkjm7uJUtGbMBmmvaRRJp4UtH7izFmtE="
 
 branches:
   only:
-    - gh-pages
+    - master
