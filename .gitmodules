@@ -1,4 +1,0 @@
-[submodule "output"]
-	path = output
-	url = https://github.com/yeonns/yeonns.github.io
-	branch = master
